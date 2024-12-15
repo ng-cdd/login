@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+
+            // Lấy giá trị từ các ô input
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Kiểm tra thông tin tài khoản và mật khẩu
+            if (username === 'Trần Thị Hiếu Cương' && password === '22/10/2008') {
+                // Chuyển hướng đến liên kết nếu đúng
+                window.location.href = 'https://ng-cdd.github.io/cong-danhh/';
+            } else {
+                // Hiển thị thông báo lỗi nếu sai
+                alert('Tên tài khoản hoặc mật khẩu không đúng!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="handleLogin(event)">
+        <h1 style="color:hsl(0, 0%, 0%)">Đăng nhập</h1>
+
+        <div class="user1">
+            <input type="text" id="username" class="txt" placeholder="Tên đăng nhập">
+            <i class="fas fa-user"></i>
+        </div>
+
+        <div class="user2">
+            <input type="password" id="password" class="txt" placeholder="Mật khẩu">
+            <i class="fas fa-lock"></i>
+        </div>
+
+        <div class="mypw">
+            <a href="#"></a>
+        </div>
+
+        <button type="submit" style="color:rgb(0, 0, 0);">Đăng nhập</button>
+
+        <p><a href="#"></a></p>
+    </form>
+</body>
+</html>
